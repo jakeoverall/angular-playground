@@ -41,13 +41,12 @@ function RepeatController(){
   };// ---> does this new function work?
   
   this.imageChange=function(item){
-    if(this.item.imgSet.id==this.item.selectedColor){
-      this.item.img=this.item.imgSet.img;
-      return this.item.img;
-    }
-    else{
-      return this.item.img;
-    }
+    item.imgSet.forEach(function(imgSet){
+      if(imgSet.id === item.selectedColor){
+        item.img = imgSet.img;
+      }
+    })
+   return item;
   };
   
   
