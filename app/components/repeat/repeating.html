@@ -77,7 +77,7 @@
           </div></div>
           <p> 
             <!--{{imageChange(item.selectedColor)}} || -->
-            <select ng-model="item.selectedColor" ng-options="color.name as color.name for color in item.colors">
+            <select ng-model="item.selectedColor" ng-change="controller.imageChange(item)" ng-options="color.name as color.name for color in item.colors">
               <option value=''>--Color--</option> 
             </select>
             <select ng-model="item.selectedSize">
